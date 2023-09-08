@@ -3,23 +3,24 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import RadarPage from "./RadarPage";
 
-const NOAA_API_BASE_URL = "/cdo-web/api/v2/locations"; // Replace with the actual NOAA endpoint you're using
+const NOAA_API_BASE_URL = "/cdo-web/api/v2/locations";
 const NOAA_TOKEN = process.env.REACT_APP_NOAA_TOKEN;
 
 const fetchRadarData = async () => {
+  console.log(`Fetching data from: ${NOAA_API_BASE_URL}`);
+
   const response = await fetch(NOAA_API_BASE_URL, {
     headers: {
-      Authorization: `Bearer ${NOAA_TOKEN}`,
+      token: NOAA_TOKEN,
     },
   });
-
-  if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
+  if (response.redirected) {
+    throw new Error("Request was redirected. Possible authentication issue.");
   }
-
-  const contentType = response.headers.get("content-type");
-  if (!contentType || !contentType.includes("application/json")) {
-    throw new Error("Received non-JSON response.");
+  if (!response.ok) {
+    const text = await response.text();
+    console.error("Error response:", text);
+    throw new Error(`HTTP error! Status: ${response.status}, Body: ${text}`);
   }
 
   return await response.json();
