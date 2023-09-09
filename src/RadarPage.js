@@ -3,12 +3,12 @@ import React from "react";
 function RadarPage({ data }) {
   // Pass radar data here as a prop or using context,
   // Just static message for now
-  // wrap this in a try catch and show a loading... spinner - then actually render it on page later
+  // wrap this in a try catch (does data.length work instead of try catch?) and show a loading... spinner - then actually render it on page later
 
   return (
     <div className="radar-container">
       <h2>Radar Data</h2>
-      <p>We've fetched some radar data! Check your console for the details.</p>
+      <p>We've fetched some radar data!</p>
       {data.length ? (
         <ul>
           {data.map((item) => (
@@ -22,7 +22,7 @@ function RadarPage({ data }) {
           ))}
         </ul>
       ) : (
-        <p>Loading...</p> // Display loading message until data is fetched
+        <p>Loading...</p> // Display loading spinner here
       )}
     </div>
   );
