@@ -4,11 +4,11 @@ Using NOAA api to plot weather data over maps
 
 ## 🏗️ Install with:
 
-### `yarn`
+`yarn`
 
 ## ✨ Run the app:
 
-### `yarn start`
+`yarn start`
 
 ## 📝 Notes
 
