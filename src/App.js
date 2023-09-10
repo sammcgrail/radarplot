@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import RadarPage from "./RadarPage";
@@ -27,6 +27,8 @@ const fetchRadarData = async () => {
 };
 
 function App() {
+  const [radarData, setRadarData] = useState([]);
+
   useEffect(() => {
     let isMounted = true; // track mounting status
 
@@ -34,7 +36,7 @@ function App() {
       try {
         const radarData = await fetchRadarData();
         if (isMounted) {
-          console.log(radarData);
+          setRadarData(radarData.results);
         }
       } catch (error) {
         console.error("Error fetching radar data:", error);
@@ -52,7 +54,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<RadarPage />} />
+          <Route path="/" element={<RadarPage data={radarData} />} />
         </Routes>
       </div>
     </Router>
