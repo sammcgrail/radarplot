@@ -45,7 +45,7 @@ export function LocationProvider({ children }) {
         await fetchAll(position.coords.latitude, position.coords.longitude);
       });
     }
-  }, []);
+  }, [locationData, weatherData]);
   return (
     <>
       {!loading ? (
