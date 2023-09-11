@@ -20,13 +20,13 @@ export default function TodayWeather() {
           const timeString = dateTime?.split(" at ")[1];
 
           return (
-            <li className={styles.timeList} key={`weather-hour-${i}`}>
+            <ul className={styles.timeList} key={`weather-hour-${i}`}>
               <p>
                 <li>{timeString}</li>
                 <li>{hour.temp}F</li>
                 <li>{hour.weather[0].description}</li>
               </p>
-            </li>
+            </ul>
           );
         })}
       </ul>
