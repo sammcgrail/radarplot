@@ -5,7 +5,11 @@ import RadarPage from "./RadarPage";
 import WeatherPage from "./WeatherPage";
 
 const NOAA_API_BASE_URL = "/cdo-web/api/v2/locations";
+// TODO: This should not be shipped to the browser.
 const NOAA_TOKEN = process.env.REACT_APP_NOAA_TOKEN;
+if (NOAA_TOKEN == null || NOAA_TOKEN === "") {
+  throw new Error(`'REACT_APP_NOAA_TOKEN' must be defined in .env.local.`);
+}
 
 const fetchRadarData = async () => {
   console.log(`Fetching data from: ${NOAA_API_BASE_URL}`);
