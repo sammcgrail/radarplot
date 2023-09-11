@@ -1,0 +1,22 @@
+.card {
+  backdrop-filter: blur(20px);
+  background-color: rgba(144, 144, 144, 0.22);
+  border: 1px solid rgba(122, 122, 122, 32);
+  border-radius: 30px;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  margin: 10px auto;
+  min-width: 450px;
+  max-width: 800px;
+  padding: 10px;
+  text-align: center;
+}
+
+.card p,
+.card h3,
+.card h3 {
+  margin: 1em 0;
+}
+
+.card img {
+  border-radius: 20px;
+}

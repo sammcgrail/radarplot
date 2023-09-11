@@ -12,8 +12,7 @@ Using NOAA api to plot weather data over maps
 
 ## 📝 Notes
 
-Requires a .env.local file in the root of the project containing the API token. The contents of the file should contain:
-Make sure to replace "privateAPITokenGoesHere" in the example with your token. 
-Token can be requested here: https://www.ncdc.noaa.gov/cdo-web/token
+Requires a .env.local file in the root of the project containing the API tokens. The file should contain these tokens:
 
-`REACT_APP_NOAA_TOKEN=privateAPITokenGoesHere`
+NOAA token: https://www.ncdc.noaa.gov/cdo-web/token
+OpenWeather account: https://openweathermap.org/api
