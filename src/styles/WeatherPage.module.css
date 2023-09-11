@@ -1,9 +1,19 @@
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: url("/public/background_image.png") no-repeat center center;
+  background-size: cover;
+}
+
 .page {
   display: flex;
   justify-content: center;
-  background: url("/public/background.png");
-  background-attachment: fixed;
-  background-size: cover;
+  position: relative;
+  z-index: 1;
 }
 
 html {

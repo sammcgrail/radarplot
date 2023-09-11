@@ -8,12 +8,15 @@ import styles from "./styles/WeatherPage.module.css";
 
 export default function WeatherPage() {
   return (
-    <div className={styles.page}>
-      <LocationProvider>
-        <Card className={styles.card}>
-          <TodayWeather />
-        </Card>
-      </LocationProvider>
-    </div>
+    <>
+      <div className={styles.background}></div>
+      <div className={styles.page}>
+        <LocationProvider>
+          <Card className={styles.card}>
+            <TodayWeather />
+          </Card>
+        </LocationProvider>
+      </div>
+    </>
   );
 }
