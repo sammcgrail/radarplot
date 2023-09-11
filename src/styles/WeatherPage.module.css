@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  justify-content: center;
+  background: url("/public/background.png");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+html {
+  background-color: rgba(85, 85, 114, 0.8);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}

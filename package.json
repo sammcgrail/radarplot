@@ -36,5 +36,9 @@
       "last 1 safari version"
     ]
   },
+  "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "~7.22.11",
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11"
+  },
   "proxy": "https://www.ncei.noaa.gov"
 }
