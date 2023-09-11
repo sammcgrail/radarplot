@@ -12,6 +12,7 @@ Using NOAA api to plot weather data over maps
 
 ## 📝 Notes
 
-Requires a .env file in the root of the project. Check out `.env.example` to see the required fields.
-NOAA token be requested here: https://www.ncdc.noaa.gov/cdo-web/token
-OpenWeather account can be made here: https://openweathermap.org/api
+Requires a .env.local file in the root of the project containing the API tokens. The file should contain these tokens:
+
+NOAA token: https://www.ncdc.noaa.gov/cdo-web/token
+OpenWeather account: https://openweathermap.org/api
