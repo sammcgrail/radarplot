@@ -10,9 +10,8 @@ Using NOAA api to plot weather data over maps
 
 `yarn start`
 
-## 📝 Notes
+## 📝 Environment variables
 
-Requires a .env.local file in the root of the project containing the API tokens. The file should contain these tokens:
-
-NOAA token: https://www.ncdc.noaa.gov/cdo-web/token
-OpenWeather account: https://openweathermap.org/api
+Required secret environment variables, defined in `.env.local`:
+- `REACT_APP_NOAA_TOKEN`: The NOAA token, generated here: https://www.ncdc.noaa.gov/cdo-web/token
+- `REACT_APP_OPEN_TOKEN`: The OpenWeather API token, generated here: https://openweathermap.org/api
