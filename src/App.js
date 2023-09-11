@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import RadarPage from "./RadarPage";
+import WeatherPage from "./WeatherPage";
 
 const NOAA_API_BASE_URL = "/cdo-web/api/v2/locations";
 const NOAA_TOKEN = process.env.REACT_APP_NOAA_TOKEN;
@@ -55,6 +56,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<RadarPage data={radarData} />} />
+          <Route path="/weather" element={<WeatherPage/>}/>
         </Routes>
       </div>
     </Router>
