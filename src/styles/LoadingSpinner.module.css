@@ -8,15 +8,16 @@
 }
 
 .container {
-  position: fixed;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .container .spinner {
   animation: spinner 1.5s linear infinite;
-  border: 5px solid rgba(255, 0, 255, 0.6);
+  border: 5px solid rgba(109, 1, 109, 0.6);
   border-radius: 50%;
   border-top: 5px solid rgba(255, 0, 0, 0.6);
+  box-shadow: 0 0 10px 5px rgba(185, 85, 39, 0.6);
   height: 50px;
   margin: 20px auto 0;
   width: 50px;

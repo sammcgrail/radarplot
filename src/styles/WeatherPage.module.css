@@ -1,9 +1,6 @@
 .page {
-  background: url("/public/fetch_error_image.jpeg");
-  background-size: cover;
+  background: url("/public/background.png");
   background-attachment: fixed;
-  box-sizing: border-box;
-  width: 100vw;
-  height: 100vh;
+  background-size: cover;
   padding: 10px 0;
 }
