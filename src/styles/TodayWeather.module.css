@@ -1,0 +1,11 @@
+.timeList {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  width: 40%;
+}
+
+.timeList p {
+  letter-spacing: 2px;
+  word-spacing: 10px;
+}

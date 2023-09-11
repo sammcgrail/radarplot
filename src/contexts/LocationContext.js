@@ -1,5 +1,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
+import LoadingSpinner from "../components/LoadingSpinner";
+import ServerError from "../components/ServerError";
+
 import fetchData from "../helpers/fetchData";
 
 const defaultLocationContext = { locationData: {}, weatherData: {} };
@@ -45,9 +48,17 @@ export function LocationProvider({ children }) {
   }, []);
   return (
     <>
+      {!loading ? (
+        locationData && weatherData ? (
           <LocationContext.Provider value={{ locationData, weatherData }}>
             {children}
           </LocationContext.Provider>
+        ) : (
+          <ServerError />
+        )
+      ) : (
+        <LoadingSpinner />
+      )}
     </>
   );
 }
