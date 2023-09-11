@@ -11,7 +11,9 @@ export default function TodayWeather() {
   return (
     <>
       <h2>{getDateString(weatherData?.hourly[0]?.dt)?.split(" at ")[0]}</h2>
-      <h3>{name}, {state} {country}</h3>
+      <h3>
+        {name}, {state} {country}
+      </h3>
       <ul>
         {weatherData?.hourly?.slice(0, 25).map((hour, i) => {
           const dateTime = getDateString(hour.dt);
@@ -20,7 +22,9 @@ export default function TodayWeather() {
           return (
             <li className={styles.timeList} key={`weather-hour-${i}`}>
               <p>
-                {timeString}: {hour.temp}F {hour.weather[0].description}
+                <li>{timeString}</li>
+                <li>{hour.temp}F</li>
+                <li>{hour.weather[0].description}</li>
               </p>
             </li>
           );

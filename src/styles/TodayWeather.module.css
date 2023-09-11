@@ -1,11 +1,18 @@
 .timeList {
   display: flex;
+  flex-direction: column; /* stack em vert style for li */
   list-style: none;
   margin: auto;
-  width: 40%;
+  width: 100%;
+  text-align: center;
 }
 
-.timeList p {
-  letter-spacing: 2px;
-  word-spacing: 10px;
+.timeList li {
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: bold;
+}
+
+ul {
+  padding-inline-start: 0px; /* this is one way to override the 40px bump for ul */
 }
