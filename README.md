@@ -14,6 +14,6 @@ Using NOAA API to plot weather data over maps
 
 Required secret environment variables, defined in `.env.local`:
 
-- `REACT_APP_NOAA_TOKEN`: The NOAA token, generated here: https://www.ncdc.noaa.gov/cdo-web/token
+- `REACT_APP_NOAA_TOKEN`: The NOAA API token, generated here: https://www.ncdc.noaa.gov/cdo-web/token
 - `REACT_APP_OPEN_TOKEN`: The OpenWeather API token, generated here: https://openweathermap.org/api
-- `REACT_APP_MAPBOX_ACCESS_TOKEN`: The MapboxGL access token, generated here: https://docs.mapbox.com/help/glossary/access-token/
+- `REACT_APP_MAPBOX_ACCESS_TOKEN`: The MapboxGL API access token, generated here: https://docs.mapbox.com/help/glossary/access-token/
