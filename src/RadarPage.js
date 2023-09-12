@@ -4,8 +4,6 @@ import LoadingSpinner from "./components/LoadingSpinner";
 
 import styles from "./styles/RadarPage.module.css";
 
-import styles from "./styles/RadarPage.module.css";
-
 function RadarPage({ data }) {
   return (
     <>
