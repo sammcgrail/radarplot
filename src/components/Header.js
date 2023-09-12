@@ -13,10 +13,10 @@ const Header = () => {
         <div className={styles.headerItems}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/">NOAA / MAPBOX</NavLink>
             </li>
             <li>
-              <NavLink to="/weather">Hourly Weather</NavLink>
+              <NavLink to="/weather">OPENWEATHER</NavLink>
             </li>
           </ul>
         </div>
