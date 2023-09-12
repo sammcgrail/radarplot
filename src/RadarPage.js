@@ -31,9 +31,9 @@ function RadarPage({ data }) {
         <div className={styles.mapContainer}>
           <MapComponent
             initialViewState={{
-              longitude: -122.4,
-              latitude: 37.8,
-              zoom: 14,
+              latitude: 42.3551,
+              longitude: -71.0657,
+              zoom: 8,
             }}
             mapStyle="mapbox://styles/mapbox/dark-v11"
           />
