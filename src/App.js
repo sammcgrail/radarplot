@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
 import RadarPage from "./RadarPage";
 import WeatherPage from "./WeatherPage";
 
@@ -57,10 +58,11 @@ function App() {
 
   return (
     <Router>
+      <Header />
       <div className="App">
         <Routes>
           <Route path="/" element={<RadarPage data={radarData} />} />
-          <Route path="/weather" element={<WeatherPage/>}/>
+          <Route path="/weather" element={<WeatherPage />} />
         </Routes>
       </div>
     </Router>
