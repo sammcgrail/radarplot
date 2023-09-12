@@ -1,6 +1,6 @@
 # radarplot
 
-Using NOAA api to plot weather data over maps
+Using NOAA API to plot weather data over maps
 
 ## 🏗️ Install with:
 
