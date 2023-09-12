@@ -1,0 +1,30 @@
+.background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: url("/public/background_image.png") no-repeat center center;
+  background-size: cover;
+}
+
+.locationsContainer {
+  width: 20%;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+  background-color: rgba(144, 144, 144, 0.22);
+  border: 1px solid rgba(122, 122, 122, 32);
+  border-radius: 30px;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  margin: 10px 0px 10px 10px;
+  min-width: 350px;
+  max-width: 800px;
+  padding: 10px;
+  text-align: center;
+}
+
+.locationsContainer ul {
+  list-style: none;
+}
