@@ -14,7 +14,7 @@ function MapComponent({ initialViewState, mapStyle }) {
     <Map
       mapboxAccessToken={MAPBOX_TOKEN}
       initialViewState={initialViewState}
-      style={{ width: 900, height: 700 }}
+      style={{ width: 800, height: 600 }}
       mapStyle={mapStyle}
     />
   );
