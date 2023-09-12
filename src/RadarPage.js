@@ -3,10 +3,6 @@ import React from "react";
 import styles from "./styles/RadarPage.module.css";
 
 function RadarPage({ data }) {
-  // Pass radar data here as a prop or using context,
-  // Just static message for now
-  // wrap this in a try catch (does data.length work instead of try catch?) and show a loading... spinner - then actually render it on page later
-
   return (
     <>
       <div className={styles.background}></div>
@@ -26,7 +22,7 @@ function RadarPage({ data }) {
             ))}
           </ul>
         ) : (
-          <p>Loading...</p> // Display loading spinner here
+          <p>Loading...</p>
         )}
       </div>
     </>
