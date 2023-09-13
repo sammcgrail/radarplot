@@ -18,6 +18,11 @@ export const options = {
         color: "#000",
       },
     },
+    y: {
+      ticks: {
+        color: "#000",
+      },
+    },
   },
 };
 
