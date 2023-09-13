@@ -7,10 +7,19 @@
   text-align: center;
 }
 
-.timeList li {
+div.timeEntry {
+  margin-bottom: 10px;
+}
+
+div.timeEntry::after {
+  content: "-";
+}
+
+div.timeEntry p {
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: bold;
+  margin: 0;
 }
 
 ul {
