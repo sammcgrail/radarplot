@@ -4,6 +4,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import ServerError from "../components/ServerError";
 
 import fetchData from "../helpers/fetchData";
+import Card from "../components/Card";
 
 const defaultLocationContext = { locationData: {}, weatherData: {} };
 
@@ -14,6 +15,7 @@ const OPEN_API_KEY = process.env.REACT_APP_OPEN_TOKEN;
 export const LocationContext = createContext(defaultLocationContext);
 
 export function LocationProvider({ children }) {
+  const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [locationData, setLocationData] = useState(null);
   const [weatherData, setWeatherData] = useState(null);
@@ -21,6 +23,9 @@ export function LocationProvider({ children }) {
   useEffect(() => {
     const fetchAll = async (lat, lon) => {
       try {
+        if (!OPEN_API_KEY) {
+          throw new Error("'REACT_APP_OPEN_TOKEN' must be defined in .env.local")
+        }
         // fetch location data
         await fetchData(
           `${OPEN_API_GEO_URL}?lat=${lat}&lon=${lon}&appid=${OPEN_API_KEY}`,
@@ -34,7 +39,7 @@ export function LocationProvider({ children }) {
           setWeatherData
         );
       } catch (error) {
-        console.log(`Sorry, unable to fetch from OpenWeather because ${error}`);
+        setError(error?.message)
       } finally {
         setLoading(false);
       }
@@ -54,7 +59,9 @@ export function LocationProvider({ children }) {
             {children}
           </LocationContext.Provider>
         ) : (
-          <ServerError />
+          <Card>
+            <ServerError errorSource="OpenWeather" error={error} />
+          </Card>
         )
       ) : (
         <LoadingSpinner />
