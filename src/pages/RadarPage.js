@@ -1,7 +1,9 @@
 import React from "react";
-import MapComponent from "./components/MapComponent";
-import WeatherPanel from "./components/WeatherPanel";
-import styles from "./styles/RadarPage.module.css";
+
+import MapComponent from "../components/MapComponent";
+import WeatherPanel from "../components/WeatherPanel";
+
+import styles from "../styles/RadarPage.module.css";
 
 function RadarPage() {
   return (
