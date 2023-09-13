@@ -9,8 +9,8 @@ export default function ServerError({ error, errorSource }) {
   return (
     <section className={styles.container}>
       <h2>
-        Sorry, there was an error fetching the data from
-        {errorSource ? ` ${errorSource}` : ""}.
+        Sorry, there was an error fetching the data
+        {errorSource ? ` from ${errorSource}` : ""}.
       </h2>
       {error ?? <h3>{error}</h3>}
     </section>
