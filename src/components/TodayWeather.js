@@ -18,9 +18,7 @@ export default function TodayWeather() {
         ),
         datasets: [
           {
-            label: "Temperature (F)",
             data: nextDayHours?.map((hour) => hour.temp),
-            yAxisID: "y-axis-temp",
             backgroundColor: "rgba(180, 0, 255, 0.8)",
             borderColor: "#000",
           },
