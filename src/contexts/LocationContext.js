@@ -50,7 +50,8 @@ export function LocationProvider({ children }) {
         await fetchAll(position.coords.latitude, position.coords.longitude);
       });
     }
-  }, [locationData, weatherData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
       {!loading ? (
