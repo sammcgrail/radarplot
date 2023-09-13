@@ -1,10 +1,11 @@
 import React from "react";
 
-import Card from "./components/Card";
-import TodayWeather from "./components/TodayWeather";
-import { LocationProvider } from "./contexts/LocationContext";
+import { LocationProvider } from "../contexts/LocationContext";
 
-import styles from "./styles/WeatherPage.module.css";
+import Card from "../components/Card";
+import TodayWeather from "../components/TodayWeather";
+
+import styles from "../styles/WeatherPage.module.css";
 
 export default function WeatherPage() {
   return (
