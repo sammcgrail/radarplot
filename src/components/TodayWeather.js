@@ -5,6 +5,8 @@ import getDateString from "../helpers/getDateString";
 import styles from "../styles/TodayWeather.module.css";
 import LineChart from "./LineChart";
 
+const OPEN_API_EMOJI_URL = "http://openweathermap.org/img/wn/";
+
 export default function TodayWeather() {
   const { locationData, weatherData } = useLocation();
   const { country, name, state } = locationData[0];
@@ -37,11 +39,20 @@ export default function TodayWeather() {
         {nextDayHours?.map((hour, i) => {
           const dateTime = getDateString(hour.dt);
           const timeString = dateTime?.split(" at ")[1];
+          const emoji = `${OPEN_API_EMOJI_URL}${hour.weather[0].icon}.png`;
           return (
             <div key={`weather-hour-${i}`} className={styles.timeEntry}>
               <p>{timeString}</p>
               <p>{hour.temp}F</p>
               <p>{hour.weather[0].description}</p>
+              <p>
+                <img
+                  id="weather-icon"
+                  src={emoji}
+                  alt=""
+                  title={hour.weather[0].description}
+                />
+              </p>
             </div>
           );
         })}
