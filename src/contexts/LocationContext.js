@@ -24,7 +24,9 @@ export function LocationProvider({ children }) {
     const fetchAll = async (lat, lon) => {
       try {
         if (!OPEN_API_KEY) {
-          throw new Error("'REACT_APP_OPEN_TOKEN' must be defined in .env.local")
+          throw new Error(
+            "'REACT_APP_OPEN_TOKEN' must be defined in .env.local"
+          );
         }
         // fetch location data
         await fetchData(
@@ -39,7 +41,7 @@ export function LocationProvider({ children }) {
           setWeatherData
         );
       } catch (error) {
-        setError(error?.message)
+        setError(error?.message);
       } finally {
         setLoading(false);
       }
