@@ -18,7 +18,7 @@ function RadarPage() {
             initialViewState={{
               latitude: 42.3551,
               longitude: -71.0657,
-              zoom: 8,
+              zoom: 9,
             }}
             mapStyle="mapbox://styles/mapbox/dark-v11"
           />
