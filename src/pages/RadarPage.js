@@ -10,18 +10,24 @@ function RadarPage() {
     // Try to get user's location
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setLocation({
-          ...location,
+        setLocation((prevLocation) => ({
+          ...prevLocation,
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
           zoom: 9,
-        });
+        }));
       },
       (error) => {
         console.error("Error getting user's location:", error);
+        setLocation((prevLocation) => ({
+          ...prevLocation,
+          latitude: 42.3551,
+          longitude: -71.0657,
+          zoom: 9,
+        }));
       }
     );
-  }, [location]);
+  }, []);
 
   return (
     <>
